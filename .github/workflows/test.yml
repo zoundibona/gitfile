@@ -8,4 +8,4 @@ jobs:
           uses: actions/checkout
 
         - name: ls
-          run: "ls -l"
+          run: ls -l
