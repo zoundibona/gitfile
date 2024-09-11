@@ -4,5 +4,8 @@ jobs:
     first:
         runs-on: ubuntu-latest
         steps:
-        - name: test
-          run: "test"
+        - name: checkout
+          uses: actions@checkout
+          
+        - name: ls
+          run: "ls -l"
