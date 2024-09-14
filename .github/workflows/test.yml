@@ -28,6 +28,7 @@ jobs:
           run: echo "The ouput is ${{steps.ids.outputs.valulle}}}"
     
     second:
+      if: always()
       
       runs-on: ubuntu-latest
   
