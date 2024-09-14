@@ -22,7 +22,7 @@ jobs:
 
         - name: produce_output
           id: ids
-          run: echo "value=TEST" >> $GITHUB_OUTPU
+          run: echo "value=TEST" >> $GITHUB_OUTPUT
 
         - name: collect_output
           run: echo "The ouput is ${{steps.ids.outputs.valulle}}}"
