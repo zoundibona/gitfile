@@ -1,6 +1,8 @@
 name: test
 
 on: push
+env:
+  info: yes
 
 
 jobs:
@@ -21,6 +23,7 @@ jobs:
       steps:
       - name: checkout
         uses: actions/checkout@v4
+
       - name: ls
         run: cat file.txt
 
