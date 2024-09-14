@@ -22,13 +22,14 @@ jobs:
 
         - name: produce_output
           id: ids
-          run: echo "TEST" >> $GITHUB_OUTPUT
+          run: echo " value=TEST" >> $GITHUB_OUTPUT
+
         - name: collect_output
-          run: echo " The ouput is {{steps.ids.output}} "
+          run: echo " The ouput is {{steps.ids.outputs.value}} "
     
     second:
       runs-on: ubuntu-latest
-      continue-on-error: true
+  
       needs: first
       steps:
       - name: checkout
