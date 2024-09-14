@@ -26,7 +26,7 @@ jobs:
 
         - name: collect_output
           continue-on-error: true
-          run: echo "The ouput is ${{steps.ids.outputs.valiule}}
+          run: echo "The ouput is ${{steps.ids.outputs.value}}
     
     second:
       if: needs.first.result==failure()
