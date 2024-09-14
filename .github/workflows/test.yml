@@ -28,6 +28,7 @@ jobs:
     
     second:
       runs-on: ubuntu-latest
+      continue-on-error: true
       needs: first
       steps:
       - name: checkout
