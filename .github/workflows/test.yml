@@ -26,9 +26,10 @@ jobs:
 
         - name: collect_output
           continue-on-error: true
-          run: echo "The ouput is ${{steps.ids.outputs.value}}"
+          run: echo "The ouput is ${{steps.ids.outputs.valulle}}"
     
     second:
+      if: always()
       runs-on: ubuntu-latest
   
       needs: first
