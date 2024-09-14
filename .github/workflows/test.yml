@@ -2,7 +2,7 @@ name: test
 
 on: push
 env:
-  info: yes
+  info: ye
 
 
 jobs:
