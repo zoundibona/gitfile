@@ -13,7 +13,7 @@ jobs:
           uses: actions/checkout@v4
 
         - name: ls
-          run: cat README.MD
+          run: cat README.md
     
     second:
       runs-on: ubuntu-latest
