@@ -18,7 +18,7 @@ jobs:
           run: |
                cat README.md
                echo -e "\n"
-               echo $info
+               echo ${{env.info}}
     
     second:
       runs-on: ubuntu-latest
