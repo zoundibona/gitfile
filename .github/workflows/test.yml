@@ -25,6 +25,7 @@ jobs:
           run: echo "value=TEST" >> $GITHUB_OUTPUT
 
         - name: collect_output
+          continue-on-error: true
           run: echo "The ouput is ${{steps.ids.outputs.vale}}
     
     second:
