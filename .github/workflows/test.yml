@@ -1,11 +1,29 @@
 name: test
-on: [push]
+
+on: push
+
+
 jobs:
     first:
+        
         runs-on: ubuntu-latest
+        
         steps:
-        - name: checkout
+        - name: checkout 
           uses: actions/checkout@v4
 
         - name: ls
-          run: "ls -l"
+          run: cat README.MD
+    
+    second:
+      runs-on: ubuntu-latest
+      steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: ls
+        run: cat file.txt
+
+
+
+      
+        
