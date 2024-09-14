@@ -19,6 +19,12 @@ jobs:
                cat README.md
                echo -e "\n"
                echo ${{env.info}}
+
+        - name: produce_output
+          id: ids
+          run: echo "TEST" >> $GITHUB_OUTPUT
+        - name: collect_output
+          run: echo " The ouput is {{steps.ids.output}} "
     
     second:
       runs-on: ubuntu-latest
