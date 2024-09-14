@@ -29,7 +29,6 @@ jobs:
           run: echo "The ouput is ${{steps.ids.outputs.value}}"
     
     second:
-      if: needs.first.result==success()
       runs-on: ubuntu-latest
   
       needs: first
