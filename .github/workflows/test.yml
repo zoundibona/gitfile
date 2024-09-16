@@ -43,6 +43,8 @@ jobs:
       - name: list dir
         run: |
 
+             var=$(cat file.txt | grep image)
+             echo $var
              sed -i s/ajoutlines/line/g file.txt
              git config --global user.email "zoundibona@yahoo.fr"
              git config --global user.name "zoundibona"
