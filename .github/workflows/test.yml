@@ -47,6 +47,7 @@ jobs:
              git add file.txt
              git commit -m sendfile
              git push
+             d
 
 
 
