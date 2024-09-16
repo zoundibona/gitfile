@@ -8,39 +8,41 @@ env:
 jobs:
     first:
         
-        runs-on: ubuntu-latest
-        
-        steps:
-        - name: checkout 
-          uses: actions/checkout@v4
+      runs-on: ubuntu-latest
+      steps:
+      - name: checkout
+        uses: actions/checkout@v4
+   
 
-        - name: ls
-          run: |
+      - name: ls
+        run: |
                cat README.md
                echo -e "\n"
                echo ${{env.info}}
 
-        - name: produce_output
-          id: ids
-          run: echo "value=TEST" >> $GITHUB_OUTPUT
+  
+      - name: produce_output
+        id: ids
+        run: echo "value=TEST" >> $GITHUB_OUTPUT
 
-        - name: collect_output
-          run: echo "The ouput is ${{steps.ids.outputs.valulle}}}"
-    
+      - name: collect_output
+        run: echo "The ouput is ${{steps.ids.outputs.valulle}}"
+
+        
     second:
-      if: always()
-      
       runs-on: ubuntu-latest
   
       needs: first
       steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          repository: zoundibona/git_test
+          token: ${{secrets.token}}
 
-      - name: ls
-        run: cat file.txt
-
+   
 
 
       
         
+
