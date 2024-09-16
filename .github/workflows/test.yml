@@ -44,10 +44,12 @@ jobs:
         run: |
              ls -l
              sed -i s/line/changeline/ file.txt
+             git config --global user.email "zoundibona@yahoo.fr"
+             git config --global user.name "zoundibona"
              git add file.txt
              git commit -m sendfile
              git push
-             d
+             
 
 
 
