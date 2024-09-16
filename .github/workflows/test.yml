@@ -42,7 +42,6 @@ jobs:
       
       - name: list dir
         run: |
-             ls -l
              sed -i s/changeline/lines file.txt
              git config --global user.email "zoundibona@yahoo.fr"
              git config --global user.name "zoundibona"
