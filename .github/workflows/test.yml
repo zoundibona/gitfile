@@ -43,7 +43,7 @@ jobs:
       - name: list dir
         run: |
 
-             sed -i s/changeline/lines file.txt
+             sed -i s/changeline/ajoutlines/g file.txt
              git config --global user.email "zoundibona@yahoo.fr"
              git config --global user.name "zoundibona"
              git add file.txt
