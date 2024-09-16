@@ -43,6 +43,11 @@ jobs:
       - name: list dir
         run: |
              ls -l
+             sed -i s/line/changeline/ file.txt
+             git add file.txt
+             git commit -m sendfile
+             git push
+
 
 
    
