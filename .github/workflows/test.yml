@@ -39,7 +39,11 @@ jobs:
         with:
           repository: zoundibona/git_test
           token: ${{secrets.token}}
-          
+      
+      - name: list dir
+        run: |
+             ls -l
+
 
    
 
