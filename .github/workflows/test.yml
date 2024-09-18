@@ -1,11 +1,62 @@
 name: test
-on: [push]
+
+on: push
+env:
+  info: yes
+
+
 jobs:
     first:
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout
-          uses: actions/checkout@v4
+        
+      runs-on: ubuntu-latest
+      steps:
+      - name: checkout
+        uses: actions/checkout@v4
+   
 
-        - name: ls
-          run: "ls -l"
+      - name: ls
+        run: |
+               cat README.md
+               echo -e "\n"
+               echo ${{env.info}}
+
+  
+      - name: produce_output
+        id: ids
+        run: echo "value=TEST" >> $GITHUB_OUTPUT
+
+      - name: collect_output
+        run: echo "The ouput is ${{steps.ids.outputs.valulle}}"
+
+        
+    second:
+      runs-on: ubuntu-latest
+  
+      needs: first
+      steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          repository: zoundibona/git_test
+          token: ${{secrets.token}}
+      
+      - name: list dir
+        run: |
+
+             
+             sed -i s/line/changeline/g file.txt
+             git config --global user.email "zoundibona@yahoo.fr"
+             git config --global user.name "zoundibona"
+             git add file.txt
+             git commit -m updatefile
+             git push
+             
+
+
+
+   
+
+
+      
+        
+
