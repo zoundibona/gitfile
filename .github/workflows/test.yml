@@ -27,6 +27,15 @@ jobs:
 
       - name: collect_output
         run: echo "The ouput is ${{steps.ids.outputs.valulle}}"
+      
+      - name: setup
+        uses: actions/setup-python@v5
+        with: 
+          python-version: '3.10' 
+          
+      - name: install packages
+        run: pip install -r requirements.txt
+        
 
         
     second:
@@ -38,7 +47,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: zoundibona/git_test
-          token: ${{secrets.token}}
+          token: ${{secrets.token}}    
+        
       
       - name: list dir
         run: |
