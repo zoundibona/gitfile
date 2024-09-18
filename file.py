@@ -1,1 +1,4 @@
-print ("test")
+
+a="valeur"
+print (a)
+
