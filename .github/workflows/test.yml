@@ -22,6 +22,7 @@ jobs:
                cat README.md
                echo -e "\n"
                echo ${{env.info}}
+               printenv
 
   
       - name: produce_output
