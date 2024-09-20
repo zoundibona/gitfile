@@ -38,8 +38,8 @@ jobs:
           cache: pip
     
           
-     # - name: install packages
-      #  run: pip install -r requirements.txt
+      - name: install packages
+        run: pip install -r requirements.txt
 
 
       - name: run_script
