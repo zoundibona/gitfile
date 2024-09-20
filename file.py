@@ -1,4 +1,6 @@
 
 a="valeur"
-print (a)
+b="info"
+print (f"{a} \n")
+print(b)
 
