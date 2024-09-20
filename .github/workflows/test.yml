@@ -1,6 +1,8 @@
 name: test
 
-on: push
+on: 
+  - push
+  - workflow_dispatch
 env:
   info: yes
 
@@ -28,16 +30,24 @@ jobs:
       - name: collect_output
         run: echo "The ouput is ${{steps.ids.outputs.valulle}}"
       
+  
       - name: setup
         uses: actions/setup-python@v5
         with: 
           python-version: '3.10' 
+      
+      - name: cache_packages
+       
+        uses: actions/cache@v4
+        with:
+          path: packages
+          key: ${{ runner.os }}-${{ hashFiles('requirements.txt')}}
           
       - name: install packages
         run: pip install -r requirements.txt
 
 
-      - name: runscript
+      - name: run_script
         run : python file.py
         
 
