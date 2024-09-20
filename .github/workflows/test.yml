@@ -9,9 +9,7 @@ env:
 
 jobs:
     first:
-      strategy:
-        matrix:
-          elements: ["a","b"]
+     
         
       runs-on: ubuntu-latest
       steps:
