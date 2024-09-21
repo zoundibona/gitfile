@@ -21,7 +21,9 @@ jobs:
   
       - name: produce_output
         id: ids
-        run: echo "value=TEST_VALEUR" >> $GITHUB_OUTPUT
+        run: | 
+          echo "value=TEST_VALEUR" >> $GITHUB_OUTPUT
+          echo "value=VALEUR"
 
       - name: collect_output
         run: echo "The ouput is $value"
