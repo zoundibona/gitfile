@@ -24,11 +24,13 @@ jobs:
         run: | 
           echo "value=TEST_VALEUR" >> $GITHUB_OUTPUT
           export var="JDKD"
-          echo "value is $var"
+          
           
 
       - name: collect_output
-        run: echo "The ouput is ${{steps.ids.outputs.value}}"
+        run: |
+          echo "The ouput is ${{steps.ids.outputs.value}}"
+          echo "value is $var"
       
   
       - name: setup
