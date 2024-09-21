@@ -31,7 +31,7 @@ jobs:
       - name: collect_output
         run: |
           echo "The ouput is ${{steps.ids.outputs.value}}"
-          echo "value from previous step is ${{env.var}}
+          echo "value from previous step is $var
       
   
       - name: setup
