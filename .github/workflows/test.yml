@@ -23,10 +23,10 @@ jobs:
         id: ids
         run: | 
           echo "value=TEST_VALEUR" >> $GITHUB_OUTPUT
-          export var="VALEUR"
+          
 
       - name: collect_output
-        run: echo "The ouput is $var"
+        run: echo "The ouput is $GITHUB_OUTPUT"
       
   
       - name: setup
