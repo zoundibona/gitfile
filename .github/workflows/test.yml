@@ -24,6 +24,7 @@ jobs:
         run: | 
           echo "value=TEST_VALEUR" >> $GITHUB_OUTPUT
           echo "var=JDKD" >> $GITHUB_ENV
+          echo "var1=1JDKD" >> $GITHUB_ENV
         
           
           
@@ -31,7 +32,7 @@ jobs:
       - name: collect_output
         run: |
           echo "The ouput is ${{steps.ids.outputs.value}}"
-          echo "value from previous step is $var
+          echo "values from previous step are $var $var1"
       
   
       - name: setup
