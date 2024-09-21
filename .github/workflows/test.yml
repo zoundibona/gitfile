@@ -23,6 +23,8 @@ jobs:
         id: ids
         run: | 
           echo "value=TEST_VALEUR" >> $GITHUB_OUTPUT
+          export var="JDKD"
+          echo "value is $var"
           
 
       - name: collect_output
