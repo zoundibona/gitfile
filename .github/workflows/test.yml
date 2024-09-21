@@ -26,7 +26,7 @@ jobs:
           
 
       - name: collect_output
-        run: echo "The ouput is $GITHUB_OUTPUT"
+        run: echo "The ouput is ${{steps.ids.outputs.value}}"
       
   
       - name: setup
