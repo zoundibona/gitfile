@@ -96,6 +96,7 @@ jobs:
     fourth:
         if: github.event_name=='pull_request'
         runs-on: ubuntu-latest
+        environment: prod
         
         needs: second
         steps:
