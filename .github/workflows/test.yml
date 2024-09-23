@@ -84,7 +84,7 @@ jobs:
     third:
       #if: github.ref=='refs/heads/dev'
       runs-on: ubuntu-latest
-      environment: dev
+     # environment: dev
       needs: second
       steps:
         - name: checkout
