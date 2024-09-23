@@ -30,6 +30,7 @@ jobs:
           
 
       - name: collect_output
+        if: github.ref=='refs/heads/second'
         run: |
           echo "The ouput is ${{steps.ids.outputs.value}}"
           echo "values from previous step are $var $var1"
