@@ -84,7 +84,7 @@ jobs:
     
     dev:
       
-      if: github.event_name=='push'
+      if: github.ref=='refs/heads/dev'
       runs-on: ubuntu-latest
       environment: dev
       
@@ -98,7 +98,7 @@ jobs:
     
       
     prod:
-        if: github.event_name=='pull_request'
+        if: github.ref=='refs/heads/main'
         runs-on: ubuntu-latest
         environment: prod
         
