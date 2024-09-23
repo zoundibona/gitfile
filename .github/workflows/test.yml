@@ -1,8 +1,9 @@
 name: test
 
 on: 
-  - push
+
   - workflow_dispatch
+  - push
   - pull_request
 env:
   info: yes
@@ -81,20 +82,23 @@ jobs:
              git commit -m updatefile
              git push
     
-    third:
-      #if: github.ref=='refs/heads/dev'
+    dev:
+      
+      if: github.event=='push'
       runs-on: ubuntu-latest
       environment: dev
+      
       needs: second
       steps:
-        - name: checkout
-          uses: actions/checkout@v4
-
-        - name: display
-          run: ls -l
-
-    fourth:
-        if: github.event_name=='pull_request'
+          - name: checkout
+            uses: actions/checkout@v4
+    
+          - name: display
+            run: ls -a
+    
+      
+    prod:
+        if: github.event=='pull_request'
         runs-on: ubuntu-latest
         environment: prod
         
