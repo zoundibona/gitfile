@@ -82,7 +82,7 @@ jobs:
              git commit -m updatefile
              git push
     
-    third:
+    dev:
      
       runs-on: ubuntu-latest
       environment: dev
