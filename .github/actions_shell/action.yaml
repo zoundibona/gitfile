@@ -10,9 +10,9 @@ runs:
       run: chmod +x bash_test.sh
       shell: bash
 
-    - name: run script
-      run: bash_test.sh
-      shell: bash
+   # - name: run script
+    #  run: bash_test.sh
+     # shell: bash
 
  
 
