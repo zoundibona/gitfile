@@ -1,3 +1,3 @@
 #!/bin/bash
 # This is a comment!
-echo "Hello World $var2"
+echo "Hello World $var"

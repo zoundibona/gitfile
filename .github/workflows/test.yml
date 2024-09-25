@@ -6,7 +6,7 @@ on:
   pull_request:
    types: synchronize
 env:
-  info: yes
+  var: yes
 
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
        
         run: |
           echo "The ouput is ${{steps.ids.outputs.value}}"
-          echo "values from previous step are $var $var1"
+          
       
   
       - name: setup
