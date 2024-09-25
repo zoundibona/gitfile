@@ -2,13 +2,19 @@ name: composite-action-shell
 description: 'composite action shell'
 
 inputs:
- variable:  
+  software:  
     description: 'File to install package from'
     required: true
-    default: '1st Variable'
+    default: 'kubeclt'
+  version:
+    description: 'version to install'
+    required: true
+    default: '1.0'
 
 runs:
   using: "composite"
+  env:
+    var: "test variable"
   steps:
   
 
@@ -17,7 +23,7 @@ runs:
       shell: bash
 
     - name: run script
-      run: ./bash_test.sh ${{inputs.variable}}
+      run: ./bash_test.sh ${{env.var}}
       shell: bash
 
  
