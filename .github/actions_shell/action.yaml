@@ -17,7 +17,7 @@ runs:
       shell: bash
 
     - name: run script
-      run: ./bash_test.sh {{inputs.variable}}
+      run: ./bash_test.sh ${{inputs.variable}}
       shell: bash
 
  
