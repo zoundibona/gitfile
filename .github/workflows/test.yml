@@ -7,6 +7,7 @@ on:
    types: synchronize
 env:
   var: yes
+  variable_info: "1st Variable"
 
 
 jobs:
@@ -50,7 +51,7 @@ jobs:
       - name: shell_output
         uses: ./.github/actions_shell
         with:
-          variable: "1st Variable"
+          variable: ${{env.variable_info}}
      #   run: pip install -r requirements.txt
 
 
