@@ -11,7 +11,7 @@ runs:
       shell: bash
 
     - name: run script
-      run: cat bash_test.sh
+      run: ./bash_test.sh
       shell: bash
 
  
