@@ -46,7 +46,8 @@ jobs:
     
           
       - name: install packages
-        run: pip install -r requirements.txt
+        uses: ./.github/actions
+     #   run: pip install -r requirements.txt
 
 
       - name: run_script

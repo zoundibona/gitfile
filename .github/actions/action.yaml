@@ -1,0 +1,19 @@
+name: composite-action
+description: 'composite action
+inputs:
+    filename:  
+    description: 'File to install package from'
+    required: false
+    default: 'World'
+
+runs:
+  using: "composite"
+  steps:
+  
+    - name: pip install
+      id: pip_install
+      run: pip install -r requirements.txt
+      shell: bash
+
+ 
+
