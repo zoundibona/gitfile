@@ -6,8 +6,8 @@ on:
   pull_request:
    types: synchronize
 env:
-  var: yes
-  variable_info: "1st Variable"
+  soft: "kubectl"
+  version: "1.0"
 
 
 jobs:
@@ -51,7 +51,8 @@ jobs:
       - name: shell_output
         uses: ./.github/actions_shell
         with:
-          variable: ${{env.variable_info}}
+          software: ${{env.soft}}
+          version: ${{env.version}}
      #   run: pip install -r requirements.txt
 
 

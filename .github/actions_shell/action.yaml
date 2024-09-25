@@ -13,8 +13,7 @@ inputs:
 
 runs:
   using: "composite"
-  env:
-    var: "test variable"
+  
   steps:
   
 
@@ -23,7 +22,7 @@ runs:
       shell: bash
 
     - name: run script
-      run: ./bash_test.sh ${{env.var}}
+      run: ./bash_test.sh
       shell: bash
 
  
