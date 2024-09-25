@@ -49,6 +49,9 @@ jobs:
         uses: ./.github/actions
         with:
           filename: requirements.txt
+      
+      - name: shell_output
+        uses: ./.github/actions_shell
      #   run: pip install -r requirements.txt
 
 

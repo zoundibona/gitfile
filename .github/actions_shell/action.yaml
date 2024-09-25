@@ -1,0 +1,14 @@
+name: composite-action-shell
+description: 'composite action shell'
+
+runs:
+  using: "composite"
+  steps:
+  
+    - name: run script
+      id: run_script
+      run: bash_test
+      shell: bash
+
+ 
+
