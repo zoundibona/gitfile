@@ -5,9 +5,9 @@ on:
   push:
   pull_request:
    types: synchronize
-env:
-  soft: "kubectl"
-  version: "1.0"
+#env:
+ # soft: "kubectl"
+  #version: "1.0"
 
 
 jobs:
@@ -51,8 +51,8 @@ jobs:
       - name: shell_output
         uses: ./.github/actions_shell
         with:
-          software: ${{env.soft}}
-          version: ${{env.version}}
+          software: "kubectl"
+          version: "1.0"
      #   run: pip install -r requirements.txt
 
 
