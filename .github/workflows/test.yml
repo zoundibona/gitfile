@@ -25,7 +25,6 @@ jobs:
         id: ids
         run: | 
           echo "value=TEST_VALEUR" >> $GITHUB_OUTPUT
-          echo "var=JDKD" >> $GITHUB_ENV
           echo "var1=1JDKD" >> $GITHUB_ENV
         
           
@@ -92,7 +91,7 @@ jobs:
       
       if: github.ref=='refs/heads/dev'
       runs-on: ubuntu-latest
-      environment: dev
+     # environment: dev
       
       needs: second
       steps:
@@ -106,7 +105,7 @@ jobs:
     prod:
         if: github.ref=='refs/heads/main'
         runs-on: ubuntu-latest
-        environment: prod
+      #  environment: prod
         
         needs: second
         steps:
