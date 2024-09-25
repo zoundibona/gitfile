@@ -2,9 +2,9 @@ name: composite-action
 description: 'composite action
 inputs:
     filename:  
-    description: 'File to install package from'
-    required: false
-    default: 'World'
+      description: 'File to install package from'
+      required: false
+      default: 'World'
 
 runs:
   using: "composite"
