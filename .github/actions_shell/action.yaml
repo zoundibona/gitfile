@@ -22,7 +22,7 @@ runs:
       shell: bash
 
     - name: run script
-      run: ./bash_test.sh
+      run: ./bash_test.sh soft=${{inputs.software}} version=${{inputs.version}}
       shell: bash
 
  
