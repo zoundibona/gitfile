@@ -3,7 +3,7 @@ description: 'composite action'
 inputs:
  filename:  
     description: 'File to install package from'
-    required: false
+    required: true
     default: 'World'
 
 runs:
@@ -12,7 +12,7 @@ runs:
   
     - name: pip install
       id: pip_install
-      run: pip install -r requirements.txt
+      run: pip install -r ${{inputs.filename}}
       shell: bash
 
  

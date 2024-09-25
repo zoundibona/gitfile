@@ -47,6 +47,8 @@ jobs:
           
       - name: install packages
         uses: ./.github/actions
+        with:
+          filename: requirements.txt
      #   run: pip install -r requirements.txt
 
 
