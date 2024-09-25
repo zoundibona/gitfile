@@ -7,11 +7,11 @@ runs:
   
 
     - name: exec script
-      run: chmod +x bash_test
+      run: chmod +x bash_test.sh
       shell: bash
 
     - name: run script
-      run: bash_test
+      run: bash_test.sh
       shell: bash
 
  
