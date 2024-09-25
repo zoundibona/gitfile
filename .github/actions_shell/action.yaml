@@ -16,9 +16,9 @@ runs:
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
 
-   - name: run script
-     run: bash_test.sh
-     shell: bash
+    - name: run script
+      run: bash_test.sh
+      shell: bash
 
  
 
