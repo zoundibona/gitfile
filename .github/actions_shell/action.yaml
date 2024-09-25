@@ -1,6 +1,12 @@
 name: composite-action-shell
 description: 'composite action shell'
 
+inputs:
+ variable:  
+    description: 'File to install package from'
+    required: true
+    default: '1st Variable'
+
 runs:
   using: "composite"
   steps:
@@ -11,7 +17,7 @@ runs:
       shell: bash
 
     - name: run script
-      run: ./bash_test.sh
+      run: ./bash_test.sh {{inputs.variable}}
       shell: bash
 
  

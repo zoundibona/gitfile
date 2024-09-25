@@ -27,9 +27,7 @@ jobs:
           echo "value=TEST_VALEUR" >> $GITHUB_OUTPUT
           echo "var1=1JDKD" >> $GITHUB_ENV
         
-          
-          
-
+      
       - name: collect_output
        
         run: |
