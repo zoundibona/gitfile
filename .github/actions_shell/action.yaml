@@ -5,8 +5,12 @@ runs:
   using: "composite"
   steps:
   
+
+    - name: exec script
+      run: chmod +x bash_test
+      shell: bash
+
     - name: run script
-      id: run_script
       run: bash_test
       shell: bash
 
