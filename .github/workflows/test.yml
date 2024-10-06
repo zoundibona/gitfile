@@ -33,7 +33,7 @@ jobs:
        
         run: |
           echo "The ouput is ${{steps.ids.outputs.value}}"
-          
+           echo "$var1"
       
   
       - name: setup
